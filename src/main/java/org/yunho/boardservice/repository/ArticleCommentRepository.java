@@ -10,12 +10,16 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.yunho.boardservice.domain.ArticleComment;
 import org.yunho.boardservice.domain.QArticleComment;
 
+import java.util.List;
+
 @RepositoryRestResource
 public interface ArticleCommentRepository extends
         JpaRepository<ArticleComment, Long>,
         QuerydslPredicateExecutor<ArticleComment>,
         QuerydslBinderCustomizer<QArticleComment>
 {
+    List<ArticleComment> findByArticle_Id(Long articleId);
+
     @Override
     default void customize(QuerydslBindings bindings, QArticleComment root) {
         bindings.excludeUnlistedProperties(true);
