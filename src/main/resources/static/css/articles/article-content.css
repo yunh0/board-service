@@ -1,0 +1,5 @@
+/* 게시글 본문 */
+#article-content > pre {
+    white-space: pre-wrap; /* 표준 */
+    word-wrap: break-word; /* 구버전 IE */
+}
