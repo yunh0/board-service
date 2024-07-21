@@ -1,4 +1,4 @@
-package org.yunho.boardservice.domain.type;
+package org.yunho.boardservice.domain.constant;
 
 import lombok.Getter;
 
