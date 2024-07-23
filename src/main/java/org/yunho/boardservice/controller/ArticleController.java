@@ -11,7 +11,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.yunho.boardservice.domain.constant.FormStatus;
 import org.yunho.boardservice.domain.constant.SearchType;
-import org.yunho.boardservice.dto.UserAccountDto;
 import org.yunho.boardservice.dto.request.ArticleRequest;
 import org.yunho.boardservice.dto.response.ArticleResponse;
 import org.yunho.boardservice.dto.response.ArticleWithCommentsResponse;
