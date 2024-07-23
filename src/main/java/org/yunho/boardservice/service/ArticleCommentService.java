@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.yunho.boardservice.domain.Article;
-import org.yunho.boardservice.domain.ArticleComment;
 import org.yunho.boardservice.domain.UserAccount;
 import org.yunho.boardservice.dto.ArticleCommentDto;
 import org.yunho.boardservice.repository.ArticleCommentRepository;
@@ -40,17 +39,6 @@ public class ArticleCommentService {
             articleCommentRepository.save(dto.toEntity(article, userAccount));
         } catch (EntityNotFoundException e) {
             log.warn("댓글 저장 실패. 댓글 작성에 필요한 정보를 찾을 수 없습니다 - {}", e.getLocalizedMessage());
-        }
-    }
-
-
-    @Deprecated
-    public void updateArticleComment(ArticleCommentDto dto) {
-        try {
-            ArticleComment articleComment = articleCommentRepository.getReferenceById(dto.id());
-            if (dto.content() != null) { articleComment.setContent(dto.content()); }
-        } catch (EntityNotFoundException e) {
-            log.warn("댓글 업데이트 실패. 댓글을 찾을 수 없습니다 - dto: {}", dto);
         }
     }
 
