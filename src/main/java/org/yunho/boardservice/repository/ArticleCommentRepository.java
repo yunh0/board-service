@@ -9,10 +9,11 @@ import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.yunho.boardservice.domain.ArticleComment;
 import org.yunho.boardservice.domain.QArticleComment;
+import org.yunho.boardservice.domain.projection.ArticleCommentProjection;
 
 import java.util.List;
 
-@RepositoryRestResource
+@RepositoryRestResource(excerptProjection = ArticleCommentProjection.class)
 public interface ArticleCommentRepository extends
         JpaRepository<ArticleComment, Long>,
         QuerydslPredicateExecutor<ArticleComment>,

@@ -11,9 +11,10 @@ import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.yunho.boardservice.domain.Article;
 import org.yunho.boardservice.domain.QArticle;
+import org.yunho.boardservice.domain.projection.ArticleProjection;
 import org.yunho.boardservice.repository.querydsl.ArticleRepositoryCustom;
 
-@RepositoryRestResource
+@RepositoryRestResource(excerptProjection = ArticleProjection.class)
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
         ArticleRepositoryCustom,
