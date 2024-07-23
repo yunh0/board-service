@@ -44,6 +44,7 @@ public class ArticleCommentService {
     }
 
 
+    @Deprecated
     public void updateArticleComment(ArticleCommentDto dto) {
         try {
             ArticleComment articleComment = articleCommentRepository.getReferenceById(dto.id());
