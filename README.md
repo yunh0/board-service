@@ -57,5 +57,7 @@
 
 ## Reference
 
+* 유즈케이스 다이어그램 : https://github.com/yunh0/board-service/blob/main/document/use-case.svg
+* ERD : https://github.com/yunh0/board-service/blob/main/document/board-service-erd.svg
 * 어드민 서비스: https://github.com/yunh0/board-admin-service
 
